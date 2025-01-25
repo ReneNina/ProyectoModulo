@@ -1,0 +1,29 @@
+{
+    "credenciales": {
+        "admin": [
+            {
+                "usuario": "admin",
+                "clave": "admin123",
+                "nombre": "Administrador Principal",
+                "email": "admin@example.com"
+            }
+        ],
+        "cliente": [
+            {
+                "usuario": "cliente1",
+                "clave": "cliente123",
+                "nombre": "Juan Pérez",
+                "email": "juan@example.com",
+                "telefono": "123456789"
+            }
+        ],
+        "invitado": [
+            {
+                "usuario": "invitado1",
+                "clave": "invitado123",
+                "nombre": "Invitado Anónimo",
+                "email": "invitado@example.com"
+            }
+        ]
+    }
+}

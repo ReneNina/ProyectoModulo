@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Cliente</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .sidebar {
+            height: 100vh;
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #343a40;
+            padding: 20px;
+            color: #fff;
+        }
+        .sidebar h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .sidebar .nav-link {
+            color: #fff;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #495057;
+        }
+        .sidebar .nav-link.active {
+            background-color: #007bff;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+        .header {
+            margin-bottom: 20px;
+        }
+        .btn-logout {
+            background-color: #dc3545;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .btn-logout:hover {
+            background-color: #c82333;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2><i class="fas fa-tachometer-alt"></i> Dashboard</h2>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-home"></i> Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="#"><i class="fas fa-user"></i> Perfil</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#"><i class="fas fa-cog"></i> Configuración</a>
+            </li>
+        </ul>
+        <button class="btn btn-logout w-100 mt-3" onclick="logout()"><i class="fas fa-sign-out-alt"></i> Cerrar Sesión</button>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Perfil de Usuario</h1>
+            <p>Bienvenido, <span id="clienteName"></span>.</p>
+        </div>
+        <div class="content">
+            <div class="profile-info">
+                <p><i class="fas fa-envelope"></i> Email: <span id="clienteEmail"></span></p>
+                <p><i class="fas fa-phone"></i> Teléfono: <span id="clienteTelefono"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const userData = JSON.parse(localStorage.getItem("userData"));
+        document.getElementById("clienteName").textContent = userData.nombre;
+        document.getElementById("clienteEmail").textContent = userData.email;
+        document.getElementById("clienteTelefono").textContent = userData.telefono || "No proporcionado";
+
+        function logout() {
+            localStorage.removeItem("userData");
+            window.location.href = "Login.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+    <item>
+        <nombre>
+            <es>Inicio</es>
+            <en>Home</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>Formulario de Registro</es>
+            <en>Registration Form</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>Configuración del Calendario</es>
+            <en>Calendar Configuration</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>Recomendaciones</es>
+            <en>Recommendations</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>Comunidad</es>
+            <en>Community</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>Extras</es>
+            <en>Extras</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>FAQ</es>
+            <en>FAQ</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>Contacto</es>
+            <en>Contact</en>
+        </nombre>
+    </item>
+    <item>
+        <nombre>
+            <es>Iniciar Sesión</es>
+            <en>Login</en>
+        </nombre>
+    </item>
+    <lenguajes>
+        <es>Español</es>
+        <en>English</en>
+    </lenguajes>
+</menu>
